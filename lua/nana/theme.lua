@@ -13,7 +13,7 @@ return function(colors, highlight)
 	local ui_title      = { fg = C.fg2, bold = true }
 	local ui_select     = { bg = C.bg1, fg = C.fg1 }
 	local ui_thumb      = { bg = C.bg3, fg = C.bg1 }
-	local text_selected = { bg = C.bg1 }
+	local text_selected = { bg = C.fg4 }
 
 	highlight('Normal', default)
 	highlight('Visual', selection)
@@ -105,13 +105,19 @@ return function(colors, highlight)
 	highlight('FocusedSymbol', text_selected)
 	highlight('TroubleIndent', { bg = C.bg2 })
 
+	highlight('NeogitSectionHeader', { fg = C.red1 })
+	highlight('NeogitPopupActionKey', { fg = C.red1 })
+	highlight('NeogitChangeModified', { fg = C.cyan1, italic = true })
+	highlight('NeogitBranchHead', { fg = C.cyan1 })
+	highlight('NeogitBranch', { fg = C.cyan1 })
+
 
 	highlight("Statement", { fg = C.fg1 })
 	highlight("String", { fg = C.green })
 	highlight("Comment", { fg = C.fg2 })
 	--highlight("PreProc", { fg = C.red1 })
 	highlight("PreProc", { fg = C.fg1 })
-	highlight("Operator", { fg = C.red1 })
+	highlight("Operator", { fg = C.fg3 })
 	highlight("StorageClass", { fg = C.fg1 })
 	highlight("Function", { fg = C.blue1 })
 	highlight("Identifier", { fg = C.fg1 })
@@ -125,10 +131,11 @@ return function(colors, highlight)
 	highlight("@lsp.type.function.definition", { fg = C.cyan1 })
 
 	-- C specific
-	--highlight("cInclude", { fg = C.blue1, italic = true })
-	highlight("cDefine", { fg = C.fg1 })
+	highlight("cInclude", { fg = C.red1 })
+	highlight("cDefine", { fg = C.cyan1 })
 	highlight("cLabel", { fg = C.fg1 })
-	highlight("cStructure", { fg = C.fg1 })
+	highlight("cStructure", { fg = C.yellow2 })
+	highlight("cStorageClass", { fg = C.yellow2 })
 	highlight("@lsp.mod.defaultLibrary.c", { italic = true })
 	--highlight("@lsp.mod.declaration.c", { fg = C.cyan1 })
 	--highlight("@lsp.mod.definition.c", { fg = C.cyan1 })
