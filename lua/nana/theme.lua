@@ -171,6 +171,10 @@ return function(colors, highlight)
 	highlight("goVarAssign", { fg = C.fg1 })
 	highlight("goFunction", { fg = C.cyan1 })
 
+	--
+	highlight("yamlBool", { fg = C.red1 })
+	highlight("yamlInteger", { fg = C.yellow2 })
+
 
 	--highlight("@lsp.type.keyword", { fg = C.red1 })
 	--highlight("@lsp.type.operator", { fg = C.red1 })
