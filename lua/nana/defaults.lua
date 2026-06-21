@@ -17,12 +17,12 @@ return {
 
 	orange       = "#f97b58",
 	beige        = "#fff3db",
-	blue1        = "#95b2d6",
-	yellow1      = "#e5cfa9",
+	blue1        = "#a2bdd6",
+	yellow1      = "#f7e6c9",
 	yellow2      = "#f9ae58",
 	magenta1     = "#c6acc4",
-	red1         = "#ec7f81",
+	red1         = "#d88d8f",
 	red2         = "#ec5f66",
 	green        = "#99c794",
-	cyan1        = "#5fb4b4",
+	cyan1        = "#6fb4b4",
 }
