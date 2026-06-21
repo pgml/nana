@@ -112,21 +112,20 @@ return function(colors, highlight)
 	highlight('NeogitBranch', { fg = C.cyan1 })
 
 
-	highlight("Statement", { fg = C.fg1 })
+	highlight("Statement", { fg = C.red1 })
 	highlight("String", { fg = C.green })
 	highlight("Comment", { fg = C.fg2 })
-	--highlight("PreProc", { fg = C.red1 })
 	highlight("PreProc", { fg = C.fg1 })
 	highlight("Operator", { fg = C.fg3 })
 	highlight("StorageClass", { fg = C.fg1 })
 	highlight("Function", { fg = C.blue1 })
 	highlight("Identifier", { fg = C.fg1 })
 	highlight("Type", { fg = C.yellow1 })
-	highlight("Number", { fg = C.fg1 })
+	highlight("Number", { fg = C.yellow1 })
 	highlight("Special", { fg = C.cyan1 })
 
 	highlight("@lsp.type.builtin", { fg = C.blue1, italic = true })
-	highlight("@lsp.type.number", { fg = C.fg1 })
+	highlight("@lsp.type.number", { fg = C.yellow2 })
 	highlight("@lsp.type.function.declaration", { fg = C.cyan1 })
 	highlight("@lsp.type.function.definition", { fg = C.cyan1 })
 
@@ -137,8 +136,6 @@ return function(colors, highlight)
 	highlight("cStructure", { fg = C.yellow2 })
 	highlight("cStorageClass", { fg = C.yellow2 })
 	highlight("@lsp.mod.defaultLibrary.c", { italic = true })
-	--highlight("@lsp.mod.declaration.c", { fg = C.cyan1 })
-	--highlight("@lsp.mod.definition.c", { fg = C.cyan1 })
 	highlight("@lsp.type.macro.c", { fg = C.magenta1 })
 	highlight("@lsp.type.enumMember.c", { fg = C.blue1 })
 	highlight("@lsp.typemod.function.declaration.c", { fg = C.cyan1 })
@@ -170,6 +167,9 @@ return function(colors, highlight)
 	highlight("goVarDefs", { fg = C.fg1 })
 	highlight("goVarAssign", { fg = C.fg1 })
 	highlight("goFunction", { fg = C.cyan1 })
+
+	-- Lua
+	highlight("@lsp.mod.declaration.lua", { fg = C.fg1 })
 
 	--
 	highlight("yamlBool", { fg = C.red1 })
