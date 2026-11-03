@@ -9,14 +9,15 @@ return function(colors, highlight)
 	local muted         = { fg = C.fg2 }
 	local selection     = { bg = C.selection_bg }
 	local current_line  = { fg = C.fg1, bg = C.selection_bg }
-	local search        = { fg = C.bg3, bg = C.yellow2, bold = true }
+	local search        = { fg = C.bg3, bg = C.yellow1, bold = true }
 	local ui_title      = { fg = C.fg2, bold = true }
 	local ui_select     = { bg = C.bg1, fg = C.fg1 }
 	local ui_thumb      = { bg = C.bg3, fg = C.bg1 }
 	local text_selected = { bg = C.fg4 }
 
-	highlight('Normal', default)
-	highlight('Visual', selection)
+	highlight("Normal", default)
+	highlight("Visual", selection)
+
 	highlight('Pmenu', { bg = C.bg3, fg = C.fg3 })
 	highlight('NormalFloat', { link = 'Pmenu' })
 	highlight('WildMenu', { link = 'Pmenu' })
@@ -55,7 +56,7 @@ return function(colors, highlight)
 	highlight('IncSearch', search)
 	highlight('Substitute', search)
 	highlight('SpellBad', { sp = C.red2, undercurl = true })
-	highlight('SpellCap', { sp = C.yellow2, undercurl = true })
+	highlight('SpellCap', { sp = C.yellow1, undercurl = true })
 	highlight('SpellLocal', { sp = C.cyan2, undercurl = true })
 	highlight('SpellRare', { sp = C.magenta, undercurl = true })
 	highlight('StatusLine', { fg = C.fg3, bg = C.bg1 })
@@ -65,7 +66,7 @@ return function(colors, highlight)
 	highlight("StatusBlack", { fg = C.fg3, bg = C.bg1 })
 	highlight("StatusRed", { fg = C.red2, bg = C.bg1 })
 	highlight("StatusGreen", { fg = C.green, bg = C.bg1 })
-	highlight("StatusYellow", { fg = C.yellow2, bg = C.bg1 })
+	highlight("StatusYellow", { fg = C.yellow1, bg = C.bg1 })
 	highlight("StatusBlue", { fg = C.blue2, bg = C.bg1 })
 	highlight("StatusMagenta", { fg = C.magenta, bg = C.bg1 })
 	highlight("StatusCyan", { fg = C.cyan2, bg = C.bg1 })
@@ -111,63 +112,51 @@ return function(colors, highlight)
 	highlight('NeogitBranchHead', { fg = C.cyan1 })
 	highlight('NeogitBranch', { fg = C.cyan1 })
 
-	highlight("netrwExe", { fg = C.yellow2 })
+	highlight("netrwExe", { fg = C.yellow1 })
 
 
-
-	highlight("Statement", { fg = C.red1 })
+	highlight("Statement", { fg = C.fg3 })
 	highlight("String", { fg = C.green })
 	highlight("Comment", { fg = C.fg2 })
-	highlight("PreProc", { fg = C.fg1 })
+	highlight("PreProc", { fg = C.fg3 })
 	highlight("Operator", { fg = C.fg3 })
 	highlight("StorageClass", { fg = C.fg1 })
 	highlight("Function", { fg = C.blue1 })
 	highlight("Identifier", { fg = C.fg1 })
 	highlight("Type", { fg = C.yellow1 })
 	highlight("Number", { fg = C.yellow1 })
+	highlight("@punctuation.bracket", { fg = C.fg3 })
 	highlight("Special", { fg = C.cyan1 })
+	highlight("Constant", { fg = C.red1 })
 
-	highlight("@lsp.type.builtin", { fg = C.blue1, italic = true })
-	highlight("@lsp.type.number", { fg = C.yellow2 })
-	highlight("@lsp.type.function.declaration", { fg = C.cyan1 })
-	highlight("@lsp.type.function.definition", { fg = C.cyan1 })
+	-- Zig
+	highlight("@lsp.typemod.function.declaration.zig", { fg = C.cyan1 })
+	highlight("@lsp.type.struct.zig", { fg = C.yellow1 })
+	highlight("@lsp.typemod.namespace.declaration.zig", { fg = C.yellow1 })
 
-	-- C specific
-	highlight("cInclude", { fg = C.red1 })
-	highlight("cDefine", { fg = C.cyan1 })
-	highlight("cLabel", { fg = C.fg1 })
-	highlight("cStructure", { fg = C.yellow2 })
-	highlight("cStorageClass", { fg = C.red1 })
-	--highlight("cStorageClass", { fg = C.yellow2 })
-	highlight("cStatement", { fg = C.red1 })
-	highlight("cTypedef", { fg = C.yellow2 })
-	highlight("@lsp.mod.defaultLibrary.c", { italic = true })
-	highlight("@lsp.type.macro.c", { fg = C.magenta1 })
-	highlight("@lsp.type.enumMember.c", { fg = C.blue1 })
+	-- Odin
+	highlight("@function.definition.odin", { fg = C.cyan1 })
+	highlight("@lsp.type.struct.odin", { fg = C.yellow1 })
+	highlight("@lsp.type.function.odin", { fg = C.blue1 })
+	highlight("@lsp.type.enumMember.odin", { fg = C.blue1 })
+	highlight("@lsp.type.namespace.odin", { fg = C.yellow1 })
+	highlight("@lsp.mod.readonly.odin", { fg = C.fg1 })
+	highlight("@lsp.typemod.property.readonly.odin", { fg = C.fg1 })
+	highlight("@lsp.typemod.function.readonly.odin", { fg = C.blue1 })
+	highlight("@punctuation.delimiter.odin", { fg = C.fg3 })
+	highlight("@function.odin", { fg = C.blue1 })
+	highlight("@constant.builtin.odin", { fg = C.blue1, italic = true })
+	highlight("@punctuation.special.odin", { fg = C.fg3 })
+
+	-- C
+	highlight("@lsp.mod.defaultLibrary.c", { fg = C.fg1 })
 	highlight("@lsp.typemod.function.declaration.c", { fg = C.cyan1 })
-	highlight("@lsp.typemod.parameter.definition.c", { fg = C.fg1 })
-	highlight("@lsp.typemod.parameter.declaration.c", { fg = C.fg1 })
-	highlight("@lsp.typemod.variable.definition.c", { fg = C.fg1 })
-	highlight("@lsp.typemod.variable.declaration.c", { fg = C.fg1 })
-	highlight("@lsp.typemod.property.declaration.c", { fg = C.fg1 })
-	highlight("@lsp.typemod.macro.declaration.c", { fg = C.fg1 })
-	highlight("@lsp.typemod.enum.declaration.c", { fg = C.yellow1 })
-	highlight("@lsp.typemod.enumMember.declaration.c", { fg = C.fg1 })
-
-	-- Zig specific
-	highlight("zigConditional", { fg = C.fg1 })
-	highlight("@lsp.type.keyword.zig", { fg = C.red1 })
-	highlight("@lsp.mod.declaration.zig", { fg = C.cyan1 })
-	highlight("@lsp.type.property.zig", { fg = C.fg1 })
-	highlight("@lsp.type.enumMember.zig", { fg = C.blue1 })
-	highlight("@lsp.type.method.zig", { fg = C.cyan1 })
-	highlight("@lsp.typemod.property.declaration.zig", { fg = C.fg1 })
-	highlight("@lsp.typemod.struct.declaration.zig", { fg = C.fg1 })
-	highlight("@lsp.typemod.parameter.declaration.zig", { fg = C.fg1 })
-	highlight("@lsp.typemod.namespace.declaration.zig", { fg = C.fg1 })
-	highlight("@lsp.typemod.variable.declaration.zig", { fg = C.fg1 })
-	highlight("@lsp.typemod.enum.declaration.zig", { fg = C.fg1 })
-	highlight("@lsp.typemod.enumMember.declaration.zig", { fg = C.fg1 })
+	highlight("@lsp.typemod.function.globalScope.c", { fg = C.blue1 })
+	highlight("@lsp.typemod.variable.readonly.c", { fg = C.magenta1 })
+	highlight("@lsp.type.function.c", { fg = C.blue1 })
+	highlight("@lsp.type.macro.c", { fg = C.magenta1 })
+	highlight("@lsp.type.class.c", { fg = C.yellow1 })
+	highlight("cParen", { fg = C.fg3 })
 
 	-- Go specific
 	highlight("goVarDefs", { fg = C.fg1 })
@@ -179,8 +168,7 @@ return function(colors, highlight)
 
 	--
 	highlight("yamlBool", { fg = C.red1 })
-	highlight("yamlInteger", { fg = C.yellow2 })
-
+	highlight("yamlInteger", { fg = C.yellow1 })
 
 	--highlight("@lsp.type.keyword", { fg = C.red1 })
 	--highlight("@lsp.type.operator", { fg = C.red1 })
