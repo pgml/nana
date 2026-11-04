@@ -123,7 +123,7 @@ return function(colors, highlight)
 	highlight("StorageClass", { fg = C.fg1 })
 	highlight("Function", { fg = C.blue1 })
 	highlight("Identifier", { fg = C.fg1 })
-	highlight("Type", { fg = C.yellow1 })
+	highlight("Type", { fg = C.fg1 })
 	highlight("Number", { fg = C.yellow1 })
 	highlight("@punctuation.bracket", { fg = C.fg3 })
 	highlight("Special", { fg = C.cyan1 })
@@ -131,7 +131,7 @@ return function(colors, highlight)
 
 	-- Zig
 	highlight("@lsp.typemod.function.declaration.zig", { fg = C.cyan1 })
-	highlight("@lsp.type.struct.zig", { fg = C.yellow1 })
+	highlight("@lsp.type.struct.zig", { fg = C.fg1 })
 	highlight("@lsp.typemod.namespace.declaration.zig", { fg = C.yellow1 })
 
 	-- Odin
@@ -147,6 +147,7 @@ return function(colors, highlight)
 	highlight("@function.odin", { fg = C.blue1 })
 	highlight("@constant.builtin.odin", { fg = C.blue1, italic = true })
 	highlight("@punctuation.special.odin", { fg = C.fg3 })
+	highlight("@type.odin", { fg = C.fg1 })
 
 	-- C
 	highlight("@lsp.mod.defaultLibrary.c", { fg = C.fg1 })
@@ -154,9 +155,11 @@ return function(colors, highlight)
 	highlight("@lsp.typemod.function.globalScope.c", { fg = C.blue1 })
 	highlight("@lsp.typemod.variable.readonly.c", { fg = C.magenta1 })
 	highlight("@lsp.type.function.c", { fg = C.blue1 })
-	highlight("@lsp.type.macro.c", { fg = C.magenta1 })
-	highlight("@lsp.type.class.c", { fg = C.yellow1 })
+	highlight("@lsp.type.enumMember.c", { fg = C.fg1 })
+	highlight("@lsp.type.macro.c", { fg = C.fg1, italic = true })
+	highlight("@lsp.type.class.c", { fg = C.fg1 })
 	highlight("cParen", { fg = C.fg3 })
+	highlight("cStructure", { fg = C.fg3 })
 
 	-- Go specific
 	highlight("goVarDefs", { fg = C.fg1 })
