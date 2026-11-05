@@ -30,7 +30,7 @@ local dark = {
 
 ---@type Colors
 local light = {
-	bg1          = "#d9dadc",
+	bg1          = "#d5d6db",
 	bg3          = "#cccccc",
 
 	fg1          = "#3f4750",
