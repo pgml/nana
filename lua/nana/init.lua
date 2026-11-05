@@ -32,12 +32,12 @@ function M:load()
 	end
 	vim.cmd('set t_Co=256')
 	vim.g.colors_name = 'nana'
-	theme(self.config.colors, highlight)
+	theme(M.colors(), highlight)
 end
 
 ---@return Colors
 M.colors = function()
-	return M.config.colors
+	return M.config.colors[vim.o.background]
 end
 
 return M
