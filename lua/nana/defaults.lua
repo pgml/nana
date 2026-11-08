@@ -8,9 +8,9 @@ local dark = {
 	bg1          = "#2E3842",
 	bg3          = "#2e353e",
 
-	fg1          = "#d5dbe6",
+	fg1          = "#dbdbdc",
 	fg2          = "#5f666b",
-	fg3          = "#bcbcbc",
+	fg3          = "#cccccc",
 	fg4          = "#46525c",
 
 	selection_bg = "#3f4750",
@@ -30,12 +30,13 @@ local dark = {
 
 ---@type Colors
 local light = {
-	bg1          = "#d5d6db",
+	--bg1          = "#d5d6db",
+	bg1          = "#dbdbdc",
 	bg3          = "#cccccc",
 
 	fg1          = "#3f4750",
 	fg2          = "#9a948a",
-	fg3          = "#4f466b",
+	fg3          = "#5f666b",
 	fg4          = "#bbbbbb",
 
 	selection_bg = "#cccccc",
